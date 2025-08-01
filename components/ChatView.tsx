@@ -198,7 +198,7 @@ export const ChatView: React.FC<ChatViewProps> = (props) => {
         
         {!isLoading && suggestedReplies.length > 0 && !editingMessageId && !chatInput && <SuggestedReplies suggestions={suggestedReplies} onSendSuggestion={handleSendSuggestion} />}
 
-        <ChatInput onSendMessage={handleSendMessageWithTools} isLoading={isLoading} onCancel={onCancelGeneration} toolConfig={toolConfig} onToolConfigChange={setToolConfig} input={chatInput} setInput={setChatInput} chatSession={chatSession} onToggleStudyMode={handleToggleStudyMode} isNextChatStudyMode={isNextChatStudyMode}/>
+        <ChatInput onSendMessage={handleSendMessageWithTools} isLoading={isLoading} onCancel={onCancelGeneration} toolConfig={toolConfig} onToolConfigChange={setToolConfig} input={chatInput} setInput={setChatInput} chatSession={chatSession} onToggleStudyMode={handleToggleStudyMode} isNextChatStudyMode={isNextChatStudyMode} settings={settings}/>
     </main>
   );
 };

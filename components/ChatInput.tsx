@@ -15,6 +15,7 @@ interface ChatInputProps {
   chatSession: ChatSession | null;
   onToggleStudyMode: (enabled: boolean) => void;
   isNextChatStudyMode: boolean;
+  settings?: any; // 添加设置对象属性
 }
 
 interface FileWithId {
@@ -142,9 +143,23 @@ export const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, 
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey && !isLoading && !isMobileView) {
-        e.preventDefault();
-        handleSubmit(e as any);
+    // 检查是否启用了Cmd+Enter发送功能
+    const useCmdEnter = settings?.sendWithCmdEnter ?? true;
+    
+    if (!isLoading && !isMobileView) {
+      if (useCmdEnter) {
+        // 使用Cmd+Enter发送消息 (Mac) 或 Ctrl+Enter (Windows/Linux)
+        if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) {
+          e.preventDefault();
+          handleSubmit(e as any);
+        }
+      } else {
+        // 使用Enter发送消息（默认行为）
+        if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          handleSubmit(e as any);
+        }
+      }
     }
   }
   
