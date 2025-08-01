@@ -56,7 +56,7 @@ const ActiveToolIndicator: React.FC<{ toolConfig: any, isStudyMode: boolean, t: 
 };
 
 
-export const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, onCancel, toolConfig, onToolConfigChange, input, setInput, chatSession, onToggleStudyMode, isNextChatStudyMode }) => {
+export const ChatInput: React.FC<ChatInputProps> = ({ onSendMessage, isLoading, onCancel, toolConfig, onToolConfigChange, input, setInput, chatSession, onToggleStudyMode, isNextChatStudyMode, settings }) => {
   const { t } = useLocalization();
   const [files, setFiles] = useState<FileWithId[]>([]);
   const [isToolsOpen, setIsToolsOpen] = useState(false);
