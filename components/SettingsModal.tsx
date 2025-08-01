@@ -46,6 +46,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = (props) => {
     { id: 'suggestionModel', section: 'behavior', texts: [t('suggestionModel'), t('suggestionModelDesc'), translations.zh.suggestionModel, translations.zh.suggestionModelDesc] },
     { id: 'defaultSearch', section: 'behavior', texts: [t('defaultSearch'), t('defaultSearchDesc'), t('useSearchOptimizerPrompt'), t('useSearchOptimizerPromptDesc'), translations.zh.defaultSearch, translations.zh.defaultSearchDesc, translations.zh.useSearchOptimizerPrompt, translations.zh.useSearchOptimizerPromptDesc] },
     { id: 'showThoughts', section: 'behavior', texts: [t('showThoughts'), t('showThoughtsDesc'), translations.zh.showThoughts, translations.zh.showThoughtsDesc] },
+    { id: 'sendWithCmdEnter', section: 'behavior', texts: [t('sendWithCmdEnter'), t('sendWithCmdEnterDesc'), translations.zh.sendWithCmdEnter, translations.zh.sendWithCmdEnterDesc] },
 
     // Advanced
     { id: 'apiKey', section: 'advanced', texts: [t('apiKey'), t('apiKeyDesc'), translations.zh.apiKey, translations.zh.apiKeyDesc] },
