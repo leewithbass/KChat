@@ -48,6 +48,7 @@ export const SettingsModal: React.FC<SettingsModalProps> = (props) => {
     { id: 'suggestionModel', section: 'model', texts: [t('suggestionModel'), t('suggestionModelDesc'), translations.zh.suggestionModel, translations.zh.suggestionModelDesc] },
     { id: 'personaBuilderModel', section: 'model', texts: [t('personaBuilderModel'), t('personaBuilderModelDesc'), translations.zh.personaBuilderModel, translations.zh.personaBuilderModelDesc] },
     { id: 'langDetectModel', section: 'model', texts: [t('langDetectModel'), t('langDetectModelDesc'), translations.zh.langDetectModel, translations.zh.langDetectModelDesc] },
+    { id: 'sendWithCmdEnter', section: 'model', texts: [t('sendWithCmdEnter'), t('sendWithCmdEnterDesc'), translations.zh.sendWithCmdEnter, translations.zh.sendWithCmdEnterDesc] },
     { id: 'dataManagement', section: 'data', texts: [t('importData'), t('exportSettings'), t('exportData'), t('clearHistory'), translations.zh.importData, translations.zh.exportSettings, translations.zh.exportData, translations.zh.clearHistory] },
   ], [t]);
 
@@ -177,6 +178,9 @@ export const SettingsModal: React.FC<SettingsModalProps> = (props) => {
           </SettingsItem>}
           {visibleSettingIds.has('langDetectModel') && <SettingsItem label={t('langDetectModel')} description={t('langDetectModelDesc')}>
             <CustomSelect options={modelOptions} selectedValue={settings.languageDetectionModel} onSelect={(value) => onSettingsChange({ languageDetectionModel: value })} className="w-48" />
+          </SettingsItem>}
+          {visibleSettingIds.has('sendWithCmdEnter') && <SettingsItem label={t('sendWithCmdEnter')} description={t('sendWithCmdEnterDesc')}>
+            <Switch size="sm" checked={settings.sendWithCmdEnter ?? true} onChange={e => onSettingsChange({ sendWithCmdEnter: e.target.checked })} />
           </SettingsItem>}
           
           {sectionVisibility.data && <h3 className="settings-section-title">{t('dataManagement')}</h3>}

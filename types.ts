@@ -86,4 +86,5 @@ export interface Settings {
   globalSystemPrompt: string;
   optimizeFormatting: boolean;
   thinkDeeper: boolean;
+  sendWithCmdEnter?: boolean; // 新增设置项，控制是否使用Cmd+Enter发送消息
 }
