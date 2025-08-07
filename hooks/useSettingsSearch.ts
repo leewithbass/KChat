@@ -28,6 +28,7 @@ export const useSettingsSearch = (searchQuery: string) => {
     { id: 'globalSystemPrompt', section: 'advanced', texts: [t('globalSystemPrompt'), t('globalSystemPromptDesc'), translations.zh.globalSystemPrompt, translations.zh.globalSystemPromptDesc] },
     { id: 'optimizeFormatting', section: 'advanced', texts: [t('optimizeFormatting'), t('optimizeFormattingDesc'), translations.zh.optimizeFormatting, translations.zh.optimizeFormattingDesc] },
     { id: 'thinkDeeper', section: 'advanced', texts: [t('thinkDeeper'), t('thinkDeeperDesc'), translations.zh.thinkDeeper, translations.zh.thinkDeeperDesc] },
+    { id: 'temperature', section: 'advanced', texts: [t('temperature'), t('temperatureDesc'), '温度', '控制模型生成文本的随机性。较高的值会使输出更具创造性，而较低的值则更具确定性。'] },
     { id: 'langDetectModel', section: 'advanced', texts: [t('langDetectModel'), t('langDetectModelDesc'), translations.zh.langDetectModel, translations.zh.langDetectModelDesc] },
     
     // Data

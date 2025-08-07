@@ -111,6 +111,8 @@ export const zh = {
     optimizeFormattingDesc: '添加指令以改善回复的结构和可读性。',
     thinkDeeper: '深度思考',
     thinkDeeperDesc: '添加指令以进行更全面、更深入的推理。',
+    temperature: '温度',
+    temperatureDesc: '控制模型生成文本的随机性。较高的值会使输出更具创造性，而较低的值则更具确定性。',
     dataManagement: '数据管理',
     importData: '导入数据',
     importDataDesc: '从 JSON 文件导入对话和设置。',

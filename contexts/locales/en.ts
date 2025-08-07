@@ -110,6 +110,8 @@ export const en = {
     optimizeFormattingDesc: 'Adds instructions for improved response structure and readability.',
     thinkDeeper: 'Think Deeper',
     thinkDeeperDesc: 'Adds instructions for more comprehensive and in-depth reasoning.',
+    temperature: 'Temperature',
+    temperatureDesc: 'Controls the randomness of the model\'s output. Higher values make the output more creative, while lower values make it more deterministic.',
     dataManagement: 'Data Management',
     importData: 'Import Data',
     importDataDesc: 'Import chats and settings from a JSON file.',

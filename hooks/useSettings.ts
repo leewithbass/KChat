@@ -22,6 +22,7 @@ const defaultSettings: Settings = {
   optimizeFormatting: false,
   thinkDeeper: false,
   apiBaseUrl: '',
+  temperature: 0.7,
 };
 
 export const useSettings = () => {

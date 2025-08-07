@@ -51,7 +51,13 @@ export function prepareChatPayload(history: Message[], settings: Settings, toolC
   
   const systemInstruction = systemInstructionParts.join('\n\n---\n\n').trim();
   
-  const configForApi: any = { systemInstruction: systemInstruction || undefined, tools: toolsForApi.length > 0 ? toolsForApi : undefined };
+  const configForApi: any = {
+    systemInstruction: systemInstruction || undefined,
+    tools: toolsForApi.length > 0 ? toolsForApi : undefined,
+    generationConfig: {
+      temperature: settings.temperature,
+    }
+  };
   if (toolConfig.showThoughts) {
     configForApi.thinkingConfig = { includeThoughts: true };
   }

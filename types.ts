@@ -87,4 +87,5 @@ export interface Settings {
   optimizeFormatting: boolean;
   thinkDeeper: boolean;
   apiBaseUrl?: string;
+  temperature: number;
 }

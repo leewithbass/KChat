@@ -73,6 +73,22 @@ export const AdvancedSettings: React.FC<AdvancedSettingsProps> = ({ settings, on
           <Switch size="sm" checked={settings.thinkDeeper} onChange={e => onSettingsChange({ thinkDeeper: e.target.checked })} />
         </SettingsItem>
       )}
+      {visibleIds.has('temperature') && (
+        <SettingsItem label="温度 (Temperature)" description="控制模型生成文本的随机性。较高的值会使输出更具创造性，而较低的值则更具确定性。">
+          <div className="flex items-center gap-2">
+            <input
+              type="range"
+              min={0}
+              max={1}
+              step={0.1}
+              value={settings.temperature}
+              onChange={e => onSettingsChange({ temperature: parseFloat(e.target.value) })}
+              className="range range-xs"
+            />
+            <span className="font-mono text-sm">{settings.temperature?.toFixed(1)}</span>
+          </div>
+        </SettingsItem>
+      )}
       {visibleIds.has('langDetectModel') && (
         <SettingsItem label={t('langDetectModel')} description={t('langDetectModelDesc')}>
           <CustomSelect options={modelOptions} selectedValue={settings.languageDetectionModel} onSelect={(value) => onSettingsChange({ languageDetectionModel: value })} className="w-48" />
